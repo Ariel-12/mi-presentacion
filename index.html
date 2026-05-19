@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,6 +15,10 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
@@ -21,7 +26,7 @@ body{
     overflow-x:hidden;
 }
 
-/* FONDO GAMER */
+/* FONDO */
 body::before{
     content:"";
     position:fixed;
@@ -30,14 +35,14 @@ body::before{
     background-image:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920');
     background-size:cover;
     background-position:center;
-    opacity:0.20;
+    opacity:0.15;
     z-index:-1;
 }
 
 header{
     text-align:center;
-    padding:50px;
-    background:rgba(0,0,0,0.7);
+    padding:60px 20px;
+    background:rgba(0,0,0,0.75);
     border-bottom:3px solid cyan;
 }
 
@@ -45,63 +50,130 @@ header h1{
     font-size:55px;
     color:cyan;
     text-shadow:0px 0px 20px cyan;
+    margin-bottom:10px;
 }
 
 header p{
-    margin-top:10px;
-    font-size:20px;
-    color:#ccc;
+    font-size:22px;
+    color:#ddd;
 }
+
+/* MENU */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:black;
+    padding:15px;
+    border-bottom:2px solid cyan;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:cyan;
+    text-shadow:0px 0px 10px cyan;
+}
+
+/* SECCIONES */
 
 section{
     width:90%;
-    max-width:1000px;
+    max-width:1100px;
     margin:40px auto;
-    background:rgba(0,0,0,0.7);
-    padding:30px;
+    background:rgba(0,0,0,0.75);
+    padding:35px;
     border-radius:20px;
-    box-shadow:0px 0px 20px rgba(0,255,255,0.3);
+    box-shadow:0px 0px 20px rgba(0,255,255,0.25);
 }
 
 section h2{
     color:cyan;
-    margin-bottom:20px;
+    margin-bottom:25px;
     font-size:35px;
     border-bottom:2px solid cyan;
     padding-bottom:10px;
 }
 
+/* DATOS */
+
+.datos{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.foto-perfil img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid cyan;
+    box-shadow:0px 0px 25px cyan;
+}
+
+.info{
+    flex:1;
+    min-width:280px;
+}
+
 .info p{
-    margin:10px 0;
+    margin:12px 0;
     font-size:20px;
 }
+
+/* SOBRE MI */
 
 .sobre-mi{
-    line-height:1.8;
+    line-height:1.9;
+    font-size:20px;
+    text-align:justify;
+}
+
+/* HOBBIES */
+
+.hobbies ul{
+    margin-left:25px;
+    line-height:2.2;
     font-size:20px;
 }
 
-.hobbies ul{
-    margin-left:20px;
-    line-height:2;
-    font-size:20px;
-}
+/* MUSICA */
 
 .musica{
     display:flex;
     align-items:center;
-    gap:20px;
+    justify-content:center;
+    gap:30px;
     flex-wrap:wrap;
 }
 
 .musica img{
-    width:250px;
-    border-radius:15px;
+    width:280px;
+    border-radius:20px;
+    border:3px solid cyan;
     transition:0.3s;
 }
 
 .musica img:hover{
     transform:scale(1.05);
+    box-shadow:0px 0px 20px cyan;
 }
 
 .musica a{
@@ -110,10 +182,16 @@ section h2{
     text-decoration:none;
 }
 
+.musica a:hover{
+    text-shadow:0px 0px 10px cyan;
+}
+
+/* JUEGOS */
+
 .juegos{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    gap:25px;
 }
 
 .card{
@@ -123,28 +201,40 @@ section h2{
     overflow:hidden;
     transition:0.3s;
     text-align:center;
+    min-height:320px;
 }
 
 .card:hover{
     transform:translateY(-10px);
-    box-shadow:0px 0px 20px cyan;
+    box-shadow:0px 0px 25px cyan;
 }
 
 .card img{
     width:100%;
-    height:220px;
+    height:230px;
     object-fit:cover;
+    display:block;
 }
 
 .card h3{
-    padding:15px;
+    padding:18px;
     color:white;
+    font-size:22px;
 }
 
+/* MISION Y VISION */
+
 .misionvision{
-    line-height:1.8;
+    line-height:1.9;
     font-size:20px;
 }
+
+.misionvision h3{
+    color:cyan;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
 
 footer{
     text-align:center;
@@ -152,6 +242,28 @@ footer{
     background:black;
     color:#aaa;
     margin-top:50px;
+    border-top:2px solid cyan;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:38px;
+    }
+
+    section h2{
+        font-size:28px;
+    }
+
+    .info p,
+    .sobre-mi,
+    .hobbies ul,
+    .misionvision{
+        font-size:18px;
+    }
+
 }
 
 </style>
@@ -163,79 +275,179 @@ footer{
 
 <h1>ARIEL GIOVANNY LIMA GUTIERREZ</h1>
 
-<p>Ingeniería en Sistemas | Gamer | Tecnología | Redes</p>
+<p>Ingeniería en Sistemas • Gamer • Tecnología • Redes</p>
 
 </header>
 
-<section>
+<nav>
+
+<ul>
+
+<li><a href="#datos">Datos</a></li>
+<li><a href="#sobre">Sobre mí</a></li>
+<li><a href="#hobbies">Hobbies</a></li>
+<li><a href="#musica">Música</a></li>
+<li><a href="#juegos">Juegos</a></li>
+<li><a href="#mision">Misión y Visión</a></li>
+
+</ul>
+
+</nav>
+
+<!-- DATOS PERSONALES -->
+
+<section id="datos">
 
 <h2>DATOS PERSONALES</h2>
 
+<div class="datos">
+
+<div class="foto-perfil">
+
+<img src="./Imagenes/perfil.jpg" alt="Foto de Ariel">
+
+</div>
+
 <div class="info">
 
-<p><b>Edad:</b> 24 años</p>
+<p><b>Nombre:</b> Ariel Giovanny Lima Gutierrez</p>
+<p><b>Edad:</b> 23 años</p>
 <p><b>Dirección:</b> Zona Alto Chijini</p>
 <p><b>Celular:</b> 71262684</p>
 <p><b>Carrera:</b> Ingeniería en Sistemas</p>
-<p><b>Universidad:</b> Salesiana de Bolivia</p>
+<p><b>Universidad:</b> Universidad Salesiana de Bolivia</p>
 <p><b>Correo:</b> arielitoguti89@gmail.com</p>
+
+</div>
 
 </div>
 
 </section>
 
-<section>
+<!-- SOBRE MI -->
+
+<section id="sobre">
 
 <h2>UN POCO SOBRE MÍ</h2>
 
 <div class="sobre-mi">
 
 <p>
-Hey! gracias por entrar a mi página, me llamo Ariel, de cariño me dicen chizito xd.
-Pues soy un chico muy tranquilo, no salgo mucho de casa, me gustan los videojuegos,
-son mi pasatiempo favorito. Amo el mundo de la tecnología, tengo mucha curiosidad
-a veces. Mi especialidad son las redes y comunicaciones, también el hardware.
-Soy un poco introvertido, pero divertido cuando entro en confianza.
-Espero nos llevemos bien 😎
+¡Hola! Gracias por visitar mi página personal. Mi nombre es Ariel,
+aunque muchos me conocen como “Chizito”.
+</p>
+
+<br>
+
+<p>
+Me apasionan los videojuegos, especialmente los competitivos y de supervivencia.
+También me encanta el mundo de la tecnología, las redes, el hardware y todo lo
+relacionado con computadoras.
+</p>
+
+<br>
+
+<p>
+Aunque soy un poco introvertido al inicio, cuando entro en confianza me gusta
+hacer reír a las personas y compartir buenos momentos.
 </p>
 
 </div>
 
 </section>
 
-<section>
+<!-- HOBBIES -->
+
+<section id="hobbies">
 
 <h2>HOBBIES</h2>
 
 <div class="hobbies">
 
 <ul>
-<li>Me gustan las películas y series de misterio con giros de trama.</li>
-<li>Me gusta ver streams y contenido relacionado a videojuegos.</li>
-<li>Me gusta un poco el diseño gráfico.</li>
-<li>Me encantan los videojuegos, especialmente los competitivos.</li>
+
+<li>🎮 Jugar videojuegos competitivos y de supervivencia.</li>
+
+<li>🎬 Ver películas y series de misterio.</li>
+
+<li>📺 Ver streams y contenido gamer.</li>
+
+<li>🎨 Aprender diseño gráfico.</li>
+
+<li>💻 Investigar sobre hardware y redes.</li>
+
 </ul>
 
 </div>
 
 </section>
 
-<section>
+<!-- MUSICA -->
+
+<!-- MUSICA -->
+
+<!-- MUSICA -->
+
+<section id="musica">
 
 <h2>MÚSICA FAVORITA</h2>
 
 <div class="musica">
 
-<img src="https://i.scdn.co/image/ab6761610000e5ebc1d0d6c6b9e6d0c8d4f0d4b7">
+<a href="https://www.youtube.com/watch?v=FgS1b2nU8AQ&list=RDFgS1b2nU8AQ&start_radio=1" target="_blank">
+
+<img 
+src="https://img.youtube.com/vi/FgS1b2nU8AQ/maxresdefault.jpg"
+alt="Musica favorita"
+style="
+width:500px;
+border-radius:20px;
+border:3px solid cyan;
+box-shadow:0px 0px 25px cyan;
+transition:0.3s;
+"
+>
+
+</a>
 
 <div>
 
-<p style="font-size:22px; margin-bottom:15px;">
-Rock Alternativo / Cigarettes After Sex
+<p style="font-size:34px; margin-bottom:20px; color:cyan;">
+🎵 MÚSICA QUE ME GUSTA
 </p>
 
-<a href="https://www.youtube.com/watch?v=sElE_BfQ67s" target="_blank">
-🎵 Escuchar en YouTube
+<p style="
+font-size:22px;
+line-height:1.8;
+color:#ddd;
+max-width:420px;
+margin-bottom:30px;
+">
+
+Me gusta escuchar música relajante y con buen ambiente
+mientras juego, programo o paso el tiempo en la computadora.
+Este tema es uno de mis favoritos.
+
+</p>
+
+<a 
+href="https://www.youtube.com/watch?v=FgS1b2nU8AQ&list=RDFgS1b2nU8AQ&start_radio=1"
+target="_blank"
+style="
+display:inline-block;
+padding:18px 30px;
+background:cyan;
+color:black;
+font-size:22px;
+font-weight:bold;
+border-radius:15px;
+text-decoration:none;
+box-shadow:0px 0px 20px cyan;
+transition:0.3s;
+">
+
+▶ ESCUCHAR EN YOUTUBE
+
 </a>
 
 </div>
@@ -243,64 +455,64 @@ Rock Alternativo / Cigarettes After Sex
 </div>
 
 </section>
+<!-- JUEGOS -->
 
-<section>
+<section id="juegos">
 
 <h2>JUEGOS FAVORITOS</h2>
 
 <div class="juegos">
 
 <div class="card">
-<img src="https://images6.alphacoders.com/327/327224.jpg">
+<img src="./Imagenes/l4d2.jpg">
 <h3>LEFT 4 DEAD 2</h3>
 </div>
 
 <div class="card">
-<img src="https://images3.alphacoders.com/118/1183105.jpg">
+<img src="./Imagenes/valorant.jpg">
 <h3>VALORANT</h3>
 </div>
 
 <div class="card">
-<img src="https://images7.alphacoders.com/519/519504.jpg">
+<img src="./Imagenes/counter.jpg">
 <h3>COUNTER STRIKE</h3>
 </div>
 
-<div class="card">
-<img src="https://images3.alphacoders.com/118/1181423.jpg">
-<h3>FORTNITE</h3>
-</div>
 
 <div class="card">
-<img src="https://images7.alphacoders.com/922/922680.jpg">
-<h3>RESIDENT EVIL - LEON KENNEDY</h3>
+
+<img src="Imagenes/residentevil.jpg">
+
+<h3>RESIDENT EVIL</h3>
+
 </div>
 
 </div>
 
 </section>
 
-<section>
+<!-- MISION Y VISION -->
+
+<section id="mision">
 
 <h2>MISIÓN Y VISIÓN</h2>
 
 <div class="misionvision">
 
-<h3 style="color:cyan; margin-bottom:10px;">Misión</h3>
+<h3>🚀 Misión</h3>
 
 <p>
-Mi misión es seguir mejorando en el área de sistemas, programación y contenido digital,
-aprendiendo constantemente nuevas tecnologías y desarrollando proyectos que me permitan
-crecer tanto profesional como personalmente.
+Seguir mejorando en el área de sistemas, programación y redes,
+aprendiendo constantemente nuevas tecnologías.
 </p>
 
 <br>
 
-<h3 style="color:cyan; margin-bottom:10px;">Visión</h3>
+<h3>🌟 Visión</h3>
 
 <p>
-Mi visión es trabajar en proyectos importantes relacionados con tecnología y diseño digital,
-combinando creatividad y programación para crear contenido y sistemas que destaquen
-visualmente y funcionen de manera eficiente.
+Trabajar en proyectos importantes relacionados con tecnología,
+software y diseño digital.
 </p>
 
 </div>
