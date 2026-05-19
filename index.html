@@ -1,27 +1,317 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi Presentación</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            background-color: lightblue;
-            font-family: Arial;
-            text-align: center;
-        }
+<title>Ariel Giovanny Lima Gutierrez</title>
 
-        h1{
-            color: darkblue;
-        }
-    </style>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* FONDO GAMER */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920');
+    background-size:cover;
+    background-position:center;
+    opacity:0.20;
+    z-index:-1;
+}
+
+header{
+    text-align:center;
+    padding:50px;
+    background:rgba(0,0,0,0.7);
+    border-bottom:3px solid cyan;
+}
+
+header h1{
+    font-size:55px;
+    color:cyan;
+    text-shadow:0px 0px 20px cyan;
+}
+
+header p{
+    margin-top:10px;
+    font-size:20px;
+    color:#ccc;
+}
+
+section{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+    background:rgba(0,0,0,0.7);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0px 0px 20px rgba(0,255,255,0.3);
+}
+
+section h2{
+    color:cyan;
+    margin-bottom:20px;
+    font-size:35px;
+    border-bottom:2px solid cyan;
+    padding-bottom:10px;
+}
+
+.info p{
+    margin:10px 0;
+    font-size:20px;
+}
+
+.sobre-mi{
+    line-height:1.8;
+    font-size:20px;
+}
+
+.hobbies ul{
+    margin-left:20px;
+    line-height:2;
+    font-size:20px;
+}
+
+.musica{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.musica img{
+    width:250px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.musica img:hover{
+    transform:scale(1.05);
+}
+
+.musica a{
+    color:cyan;
+    font-size:22px;
+    text-decoration:none;
+}
+
+.juegos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#111;
+    border:2px solid cyan;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0px 0px 20px cyan;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+    color:white;
+}
+
+.misionvision{
+    line-height:1.8;
+    font-size:20px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:black;
+    color:#aaa;
+    margin-top:50px;
+}
+
+</style>
 </head>
 
 <body>
 
-    <h1>Hola, soy Giovanny</h1>
+<header>
 
-    <p>Bienvenido a mi página personal.</p>
+<h1>ARIEL GIOVANNY LIMA GUTIERREZ</h1>
+
+<p>Ingeniería en Sistemas | Gamer | Tecnología | Redes</p>
+
+</header>
+
+<section>
+
+<h2>DATOS PERSONALES</h2>
+
+<div class="info">
+
+<p><b>Edad:</b> 24 años</p>
+<p><b>Dirección:</b> Zona Alto Chijini</p>
+<p><b>Celular:</b> 71262684</p>
+<p><b>Carrera:</b> Ingeniería en Sistemas</p>
+<p><b>Universidad:</b> Salesiana de Bolivia</p>
+<p><b>Correo:</b> arielitoguti89@gmail.com</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>UN POCO SOBRE MÍ</h2>
+
+<div class="sobre-mi">
+
+<p>
+Hey! gracias por entrar a mi página, me llamo Ariel, de cariño me dicen chizito xd.
+Pues soy un chico muy tranquilo, no salgo mucho de casa, me gustan los videojuegos,
+son mi pasatiempo favorito. Amo el mundo de la tecnología, tengo mucha curiosidad
+a veces. Mi especialidad son las redes y comunicaciones, también el hardware.
+Soy un poco introvertido, pero divertido cuando entro en confianza.
+Espero nos llevemos bien 😎
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>HOBBIES</h2>
+
+<div class="hobbies">
+
+<ul>
+<li>Me gustan las películas y series de misterio con giros de trama.</li>
+<li>Me gusta ver streams y contenido relacionado a videojuegos.</li>
+<li>Me gusta un poco el diseño gráfico.</li>
+<li>Me encantan los videojuegos, especialmente los competitivos.</li>
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>MÚSICA FAVORITA</h2>
+
+<div class="musica">
+
+<img src="https://i.scdn.co/image/ab6761610000e5ebc1d0d6c6b9e6d0c8d4f0d4b7">
+
+<div>
+
+<p style="font-size:22px; margin-bottom:15px;">
+Rock Alternativo / Cigarettes After Sex
+</p>
+
+<a href="https://www.youtube.com/watch?v=sElE_BfQ67s" target="_blank">
+🎵 Escuchar en YouTube
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>JUEGOS FAVORITOS</h2>
+
+<div class="juegos">
+
+<div class="card">
+<img src="https://images6.alphacoders.com/327/327224.jpg">
+<h3>LEFT 4 DEAD 2</h3>
+</div>
+
+<div class="card">
+<img src="https://images3.alphacoders.com/118/1183105.jpg">
+<h3>VALORANT</h3>
+</div>
+
+<div class="card">
+<img src="https://images7.alphacoders.com/519/519504.jpg">
+<h3>COUNTER STRIKE</h3>
+</div>
+
+<div class="card">
+<img src="https://images3.alphacoders.com/118/1181423.jpg">
+<h3>FORTNITE</h3>
+</div>
+
+<div class="card">
+<img src="https://images7.alphacoders.com/922/922680.jpg">
+<h3>RESIDENT EVIL - LEON KENNEDY</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>MISIÓN Y VISIÓN</h2>
+
+<div class="misionvision">
+
+<h3 style="color:cyan; margin-bottom:10px;">Misión</h3>
+
+<p>
+Mi misión es seguir mejorando en el área de sistemas, programación y contenido digital,
+aprendiendo constantemente nuevas tecnologías y desarrollando proyectos que me permitan
+crecer tanto profesional como personalmente.
+</p>
+
+<br>
+
+<h3 style="color:cyan; margin-bottom:10px;">Visión</h3>
+
+<p>
+Mi visión es trabajar en proyectos importantes relacionados con tecnología y diseño digital,
+combinando creatividad y programación para crear contenido y sistemas que destaquen
+visualmente y funcionen de manera eficiente.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 - Página Personal de Ariel Giovanny Lima Gutierrez</p>
+
+</footer>
 
 </body>
 </html>
