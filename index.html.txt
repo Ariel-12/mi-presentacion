@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Presentación</title>
+
+    <style>
+        body{
+            background-color: lightblue;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h1{
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hola, soy Giovanny</h1>
+
+    <p>Bienvenido a mi página personal.</p>
+
+</body>
+</html>
